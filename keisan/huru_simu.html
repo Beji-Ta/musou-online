@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta property="description" content="茶々.柴桑の真三國無双OnlineZ、武器フル特別シミュレーター">
+<title>茶々のフルトクシミュレータ｜じゆーかったつおんらいん</title>
+<script type="text/javascript">
+	function calc(){
+		joushou();
+		idou();
+	}
+	function joushou() {
+		var dc = document.forms[0];
+		dc.kiseki.value = Math.ceil(100 / (6 * dc.bairitsu.value) * dc.huyo.value);
+		dc.hagashi.value = dc.kiseki.value * dc.rank.value;
+		dc.jou_total.value = dc.kiseki.value * 16;
+	}
+	function idou(){
+		var dc = document.forms[0];
+		dc.densetu_set.value = Math.ceil(100/(10+12+14)*dc.itoku.value);
+		dc.houseki.value = Number(dc.densetu_set.value) * Number(dc.rensei.value);
+		dc.rentan.value = (5 + Number(dc.rank.value)*2) * Number(dc.densetu_set.value) * Number(dc.rensei.value);
+		dc.houseki_coin.value = Number(dc.houseki.value)*32;
+		dc.rentan_coin.value = Number(dc.rentan.value)*3;
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript" src="..\public_html\ra\script.php"></script><noscript><p><img src="..\public_html\ra\track.gif" alt="" width="1" height="1"></p></noscript>
+茶々の特別付けシミュレータ<br>
+背景が緑色の部分の数字を合わせてね！
+  <form>
+    <table>
+      <tr>
+        <td bgcolor="CFFFB7" colspan="2">武器ランク&nbsp; <select name="rank" onchange="calc();">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="CFFFB7" colspan="2">上昇値特別倍率&nbsp; <select name="bairitsu" onchange="joushou();">
+            <option value="1">通常時</option>
+            <option value="2">２倍</option>
+            <option value="3">３倍</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <table style="border: 2px pink solid;">
+            <tr>
+              <td align="center">--上昇値特別計算--</td>
+            </tr>
+            <tr>
+              <td bgcolor="CFFFB7">特別付与数 <select name="huyo" onchange="joushou();">
+                  <option value="8">8</option>
+                  <option value="16">16</option>
+                  <option value="24">24</option>
+                  <option value="32">32</option>
+                  <option value="40">40</option>
+              </select>
+              </td>
+            </tr>
+            <tr>
+              <td align="center"><br>&nbsp;-予測結果-</td>
+            </tr>
+            <tr>
+              <td>
+                必要貴石数
+                <input type="text" name="kiseki" size="3" readonly="readonly" value="0" style="text-align: right;">個<br>
+                鍛錬除去費用
+                <input type="text" name="hagashi" size="3" readonly="readonly" value="0" style="text-align: right;">コイン<br>
+                &nbsp;<br>
+                貴石を買ったとすると<br>
+                <input type="text" name="jou_total" size="4" readonly="readonly" value="0" style="text-align: right;">コインかかります。
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td valign="top">
+          <table style="border: 2px skyblue solid;">
+            <tr>
+              <td align="center">--移動特別計算--</td>
+            </tr>
+            <tr>
+              <td bgcolor="CFFFB7">移動特別付与数
+                <select name="itoku" onchange="idou();">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+              </select><br>
+              伝説化三段までの錬成回数
+              <select name="rensei" onchange="idou();">
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+              </select>回
+              </td>
+            </tr>
+            <tr>
+              <td align="center"><br>&nbsp;-予測結果-</td>
+            </tr>
+            <tr>
+              <td>伝説三段化の必要回数
+                <input type="text" name="densetu_set" size="3" readonly="readonly" value="0" style="text-align: right;">セット<br>
+                必要宝石数
+                <input type="text" name="houseki" size="3" readonly="readonly" value="0" style="text-align: right;">個<br>
+                必要錬丹数
+                <input type="text" name="rentan" size="3" readonly="readonly" value="0" style="text-align: right;">個<br>
+                &nbsp;<br>
+                宝石代<input type="text" name="houseki_coin" size="4" readonly="readonly" value="0" style="text-align: right;">コイン<br>
+                錬丹代<input type="text" name="rentan_coin" size="4" readonly="readonly" value="0" style="text-align: right;">コイン<br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
