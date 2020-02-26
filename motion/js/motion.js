@@ -2,7 +2,7 @@
   var columns = [
     {id: "id", name: "ID", field: "id", width: 60, sortable: true, editor: Slick.Editors.Text},
     {id: "wepon", name: "武器名", field: "wepon", width: 60, sortable: true, editor: Slick.Editors.Text},
-    {id: "weponkn", name: "武器ｶﾅ", field: "weponkn", width: 60, sortable: true, editor: Slick.Editors.Text},
+    {id: "weponkn", name: "武器カナ", field: "weponkn", width: 60, sortable: true, editor: Slick.Editors.Text},
     {id: "c1_totsu", name: "C1突", field: "c1_totsu", width: 60, sortable: true, editor: Slick.Editors.Text},
     {id: "c6_totsu", name: "C6突", field: "c6_totsu", width: 60, sortable: true, editor: Slick.Editors.Text},
     {id: "c1_sai", name: "C1砕", field: "c1_sai", width: 60, sortable: true, editor: Slick.Editors.Text},
