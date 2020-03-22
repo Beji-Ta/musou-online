@@ -1392,6 +1392,39 @@ function buki_init(buki){
 			kankaku = 0;
 			shime = 0;
 		break;
+		case "画戟":
+			base = new Array(52,49,30,190,110,120,130);
+			up   = new Array(35,38,30,33,16,0,0);
+			slot = new Array(5,6,2,3,1);
+			hosei = 13;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
+		case "鴛鴦鉞":
+			base = new Array(52,47,33,160,170,135,145);
+			up   = new Array(25,18,28,35,40,0,0);
+			slot = new Array(2,1,3,5,6);
+			hosei = 10;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
+		case "宝戟":
+			base = new Array(53,42,40,180,140,125,130);
+			up   = new Array(30,17,38,28,35,0,0);
+			slot = new Array(3,1,6,2,5);
+			hosei = 10;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
 		default:
 		base = new Array(0,0,0,0,0,0,0);
 		up   = new Array(0,0,0,0,0,0,0);
@@ -2554,6 +2587,54 @@ function level_init(buki,lebel){
 			tmp["盾牌剣"][10] = new Array(15,10,15,10,10,10,0);
 			level = tmp[buki][lebel];
 		break;
+		case "画戟":
+			tmp = new Array();
+			tmp["画戟"] = new Array();
+			tmp["画戟"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["画戟"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["画戟"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["画戟"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["画戟"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["画戟"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["画戟"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["画戟"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["画戟"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["画戟"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["画戟"][10] = new Array(15,10,15,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
+		case "鴛鴦鉞":
+			tmp = new Array();
+			tmp["鴛鴦鉞"] = new Array();
+			tmp["鴛鴦鉞"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["鴛鴦鉞"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["鴛鴦鉞"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["鴛鴦鉞"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["鴛鴦鉞"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["鴛鴦鉞"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["鴛鴦鉞"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["鴛鴦鉞"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["鴛鴦鉞"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["鴛鴦鉞"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["鴛鴦鉞"][10] = new Array(15,10,15,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
+		case "宝戟":
+			tmp = new Array();
+			tmp["宝戟"] = new Array();
+			tmp["宝戟"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["宝戟"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["宝戟"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["宝戟"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["宝戟"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["宝戟"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["宝戟"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["宝戟"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["宝戟"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["宝戟"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["宝戟"][10] = new Array(15,10,15,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
 		default:
 			level = new Array(0,0,0,0,0,0,0);
 		break;
@@ -2591,7 +2672,7 @@ function load_setting(){
 		今のところ、大々的に公開することはなく、フレンド限定でURLを公開しています。<br>
 		本サイトを知ったフレンドの方は知り合いの方に広めないよう、お願い致します。<br>
 		&nbsp;<br>
-		2019年11月22日版 を反映（～盾牌剣）<br>
+		2020年03月22日版 宝戟まで<br>
 		計算結果が出ない場合は、ブラウザのキャッシュをクリアしてから再度試してください。<br>
 		本家サイトで登録されていた武器のデータしか入っていません。時間があるときに追加予定<br>
 		&nbsp;<br>
@@ -2947,6 +3028,12 @@ function load_setting(){
 									九歯鈀</option>
 																<option value="盾牌剣">
 									盾牌剣</option>
+																<option value="画戟">
+									画戟</option>
+																<option value="鴛鴦鉞">
+									鴛鴦鉞</option>
+																<option value="宝戟">
+									宝戟</option>
 															</select>
 						</p>
 					</td>
@@ -4284,6 +4371,12 @@ function basic_radar12() {
 									九歯鈀</option>
 																<option value="盾牌剣">
 									盾牌剣</option>
+																<option value="画戟">
+									画戟</option>
+																<option value="鴛鴦鉞">
+									鴛鴦鉞</option>
+																<option value="宝戟">
+									宝戟</option>
 															</select>
 						</p>
 					</td>
