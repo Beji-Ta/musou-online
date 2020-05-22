@@ -1425,6 +1425,17 @@ function buki_init(buki){
 			kankaku = 0;
 			shime = 0;
 		break;
+		case "隼双鉞":
+			base = new Array(52,47,35,180,190,145,125);
+			up   = new Array(29,24,35,32,28,0,0);
+			slot = new Array(3,1,5,6,2);
+			hosei = 15;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
 		default:
 		base = new Array(0,0,0,0,0,0,0);
 		up   = new Array(0,0,0,0,0,0,0);
@@ -2635,6 +2646,22 @@ function level_init(buki,lebel){
 			tmp["宝戟"][10] = new Array(15,10,15,10,10,10,0);
 			level = tmp[buki][lebel];
 		break;
+		case "隼双鉞":
+			tmp = new Array();
+			tmp["隼双鉞"] = new Array();
+			tmp["隼双鉞"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["隼双鉞"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["隼双鉞"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["隼双鉞"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["隼双鉞"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["隼双鉞"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["隼双鉞"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["隼双鉞"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["隼双鉞"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["隼双鉞"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["隼双鉞"][10] = new Array(15,10,15,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
 		default:
 			level = new Array(0,0,0,0,0,0,0);
 		break;
@@ -3034,6 +3061,8 @@ function load_setting(){
 									鴛鴦鉞</option>
 																<option value="宝戟">
 									宝戟</option>
+																<option value="隼双鉞">
+									隼双鉞</option>
 															</select>
 						</p>
 					</td>
@@ -4377,6 +4406,8 @@ function basic_radar12() {
 									鴛鴦鉞</option>
 																<option value="宝戟">
 									宝戟</option>
+																<option value="隼双鉞">
+									隼双鉞</option>
 															</select>
 						</p>
 					</td>
