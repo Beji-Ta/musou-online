@@ -1425,11 +1425,44 @@ function buki_init(buki){
 			kankaku = 0;
 			shime = 0;
 		break;
+		case "烈撃刀":
+			base = new Array(46,37,33,170,140,130,140);
+			up   = new Array(24,33,29,31,31,0,0);
+			slot = new Array(1,6,2,5,3);
+			hosei = 11;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
 		case "隼双鉞":
 			base = new Array(52,47,35,180,190,125,130);
 			up   = new Array(29,24,35,32,28,0,0);
 			slot = new Array(3,1,5,6,2);
 			hosei = 15;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
+		case "峨嵋刺":
+			base = new Array(58,45,21,130,190,140,135);
+			up   = new Array(40,28,20,22,36,0,0);
+			slot = new Array(6,3,1,2,5);
+			hosei = 10;
+			motion = "未検証";
+			offset1 = 0;
+			offset2 = 0;
+			kankaku = 0;
+			shime = 0;
+		break;
+		case "翳扇":
+			base = new Array(50,35,28,160,180,125,140);
+			up   = new Array(33,25,20,37,34,0,0);
+			slot = new Array(3,2,1,6,5);
+			hosei = 13;
 			motion = "未検証";
 			offset1 = 0;
 			offset2 = 0;
@@ -2646,6 +2679,22 @@ function level_init(buki,lebel){
 			tmp["宝戟"][10] = new Array(15,10,15,10,10,10,0);
 			level = tmp[buki][lebel];
 		break;
+		case "烈撃刀":
+			tmp = new Array();
+			tmp["烈撃刀"] = new Array();
+			tmp["烈撃刀"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["烈撃刀"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["烈撃刀"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["烈撃刀"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["烈撃刀"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["烈撃刀"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["烈撃刀"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["烈撃刀"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["烈撃刀"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["烈撃刀"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["烈撃刀"][10] = new Array(15,10,20,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
 		case "隼双鉞":
 			tmp = new Array();
 			tmp["隼双鉞"] = new Array();
@@ -2678,9 +2727,42 @@ function level_init(buki,lebel){
 			tmp["堕落"][10] = new Array(20,0,20,30,20,5,0);
 			level = tmp[buki][lebel];
 		break;
+		case "峨嵋刺":
+			tmp = new Array();
+			tmp["峨嵋刺"] = new Array();
+			tmp["峨嵋刺"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["峨嵋刺"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["峨嵋刺"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["峨嵋刺"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["峨嵋刺"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["峨嵋刺"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["峨嵋刺"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["峨嵋刺"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["峨嵋刺"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["峨嵋刺"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["峨嵋刺"][10] = new Array(15,10,20,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
+		case "翳扇":
+			tmp = new Array();
+			tmp["翳扇"] = new Array();
+			tmp["翳扇"][0] = new Array(0,0,0,0,0,0,0);
+			tmp["翳扇"][1] = new Array(0,0,0,0,10,0,0);
+			tmp["翳扇"][2] = new Array(0,0,0,0,10,2,0);
+			tmp["翳扇"][3] = new Array(5,0,0,0,10,2,0);
+			tmp["翳扇"][4] = new Array(5,0,5,0,10,2,0);
+			tmp["翳扇"][5] = new Array(5,0,5,10,10,2,0);
+			tmp["翳扇"][6] = new Array(5,10,5,10,10,2,0);
+			tmp["翳扇"][7] = new Array(5,10,5,10,10,5,0);
+			tmp["翳扇"][8] = new Array(5,10,5,10,10,7,0);
+			tmp["翳扇"][9] = new Array(5,10,5,10,10,10,0);
+			tmp["翳扇"][10] = new Array(15,10,20,10,10,10,0);
+			level = tmp[buki][lebel];
+		break;
 		default:
 			level = new Array(0,0,0,0,0,0,0);
 		break;
+
 	}
 }
 function load_setting(){
@@ -2718,6 +2800,9 @@ function load_setting(){
 		2020年05月25日版　隼双鉞まで<br>
 		計算結果が出ない場合は、ブラウザのキャッシュをクリアしてから再度試してください。<br>
 		本家サイトで登録されていた武器のデータしか入っていません。時間があるときに追加予定<br>
+		&nbsp;<br>
+		2020年7月29日　烈撃刀、峨嵋刺、翳扇　追加しました。
+		他上方武器は多々あれど合成データは入っていないので適宜各人で調整してください。
 		&nbsp;<br>
 		「現在の内容を保存」ボタンを押すと、アイテム以外の情報が保存できます。<br>
 		保存キーを控えておけば、次からは保存キーを入力して「保存データ読込み」ボタンでデータが復活できます。<br>
@@ -3077,8 +3162,14 @@ function load_setting(){
 									鴛鴦鉞</option>
 																<option value="宝戟">
 									宝戟</option>
-																<option value="隼双鉞">
+																<option value="烈撃刀">
+									烈撃刀</option>
+									                            <option value="隼双鉞">
 									隼双鉞</option>
+									                            <option value="峨嵋刺">
+		                            峨嵋刺</option>
+									                            <option value="翳扇">
+		                            翳扇</option>
 															</select>
 						</p>
 					</td>
